@@ -49,7 +49,7 @@ extern "C"
     }
 
 #ifndef FLUENT_LIBC_PAIR_GENERIC_DEFINED
-    DEFINE_PAIR_T(void *, void *, generic_pair)
+    DEFINE_PAIR_T(void *, void *, generic)
 #   define FLUENT_LIBC_PAIR_GENERIC_DEFINED 1
 #endif
 
