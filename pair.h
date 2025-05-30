@@ -12,6 +12,20 @@
 #define FLUENT_LIBC_PAIR_LIBRARY_H
 
 // ============= FLUENT LIB C =============
+// Generic Pair Utility
+// ----------------------------------------
+// Lightweight utility to group two arbitrary pointers together.
+// Useful for functions that need to return or associate two values.
+//
+// Features:
+// - `pair_t`: Struct with two `void *` fields: `first` and `second`
+// - `pair_new`: Inline constructor for easy instantiation
+//
+// Usage Example:
+// ----------------------------------------
+//   int a = 1, b = 2;
+//   pair_t p = pair_new(&a, &b);
+//   printf("First = %d, Second = %d\n", *(int*)p.first, *(int*)p.second);
 
 // ============= FLUENT LIB C++ =============
 #if defined(__cplusplus)
