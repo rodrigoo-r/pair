@@ -42,7 +42,7 @@ extern "C"
                                                               \
     static inline pair_##NAME##_t pair_##NAME##_new(K first, V second)  \
     {                                                         \
-        pair_t p;                                             \
+        pair_##NAME##_t p;                                             \
         p.first = first;                                      \
         p.second = second;                                    \
         return p;                                             \
