@@ -11,6 +11,14 @@
 #ifndef FLUENT_LIBC_PAIR_LIBRARY_H
 #define FLUENT_LIBC_PAIR_LIBRARY_H
 
+// ============= FLUENT LIB C =============
+
+// ============= FLUENT LIB C++ =============
+#if defined(__cplusplus)
+extern "C"
+{
+#endif
+
 /**
  * \brief Generic pair structure to hold two pointers.
  *
@@ -43,5 +51,10 @@ static inline pair_t pair_new(void *first, void *second)
     p.second = second; /**< Initialize the second element of the pair */
     return p;          /**< Return the initialized pair */
 }
+
+// ============= FLUENT LIB C++ =============
+#if defined(__cplusplus)
+}
+#endif
 
 #endif //FLUENT_LIBC_PAIR_LIBRARY_H
