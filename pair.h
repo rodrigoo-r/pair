@@ -36,8 +36,8 @@ extern "C"
 #define DEFINE_PAIR_T(K, V, NAME)                             \
     typedef struct                                            \
     {                                                         \
-        void *first;                                          \
-        void *second;                                         \
+        K first;                                              \
+        V second;                                             \
     } pair_##NAME##_t;                                        \
                                                               \
     static inline pair_##NAME##_t pair_##NAME##_new(void *first, void *second)  \
