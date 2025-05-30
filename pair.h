@@ -33,6 +33,21 @@ extern "C"
 {
 #endif
 
+#define DEFINE_PAIR_T(K, V, NAME)                             \
+    typedef struct                                            \
+    {                                                         \
+        void *first;                                          \
+        void *second;                                         \
+    } pair_##NAME##_t;                                        \
+                                                              \
+    static inline pair_##NAME##_t pair_##NAME##_new(void *first, void *second)  \
+    {                                                         \
+        pair_t p;                                             \
+        p.first = first;                                      \
+        p.second = second;                                    \
+        return p;                                             \
+    }
+
 /**
  * \brief Generic pair structure to hold two pointers.
  *
@@ -47,7 +62,7 @@ typedef struct
 {
     void *first;  /**< Pointer to the first element of the pair */
     void *second; /**< Pointer to the second element of the pair */
-} pair_t;
+} generic_pair_t;
 
 /**
  * \brief Creates a generic pair from two pointers.
@@ -58,9 +73,9 @@ typedef struct
  * \param second Pointer to the second element of the pair.
  * \return Initialized \ref pair_t containing the two pointers.
  */
-static inline pair_t pair_new(void *first, void *second)
+static inline generic_pair_t generic_pair_new(void *first, void *second)
 {
-    pair_t p;
+    generic_pair_t p;
     p.first = first;   /**< Initialize the first element of the pair */
     p.second = second; /**< Initialize the second element of the pair */
     return p;          /**< Return the initialized pair */
