@@ -40,7 +40,7 @@ extern "C"
         V second;                                             \
     } pair_##NAME##_t;                                        \
                                                               \
-    static inline pair_##NAME##_t pair_##NAME##_new(void *first, void *second)  \
+    static inline pair_##NAME##_t pair_##NAME##_new(K first, V second)  \
     {                                                         \
         pair_t p;                                             \
         p.first = first;                                      \
